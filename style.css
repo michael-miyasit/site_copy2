@@ -1,0 +1,436 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+
+
+
+
+/* common */
+
+body {
+  line-height: 1.8;
+  /* font-family: 'Gentium Book Basic', serif; */
+  color: #777777;
+  line-height: 1.2;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+.container {
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #000;
+  font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+
+/* header */
+header {
+  margin-top: 60px;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+header .logo h1 {
+  font-size: 36px;
+}
+header .logo p {
+  font-size: 18px;
+  margin-top: 8px;
+  color: inherit;
+  /* font-family: Georgia, 游明朝, YuMincho, "Hiragino Mincho ProN", Meiryo, serif; */
+}
+header .search{
+  align-self: center;
+  margin-top: 30px;
+}
+
+header .menu {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin: 30px 0 0;
+}
+
+header .menu li {
+  position: relative;
+  transition: color .5s;
+}
+header li:hover {
+  color: #c49029;
+}
+
+header .menu li a {
+  display: inline-block;
+  padding: 18px 10px;
+  /* outline: #1e9960 1px solid; */
+}
+
+header .dropmenu, .dropmenu2 {
+  position: absolute;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  top: 50px;
+  transition: visible .5s, opacity .3s;
+}
+.dropmenu li,
+.dropmenu2 li {
+  border: rgba(0, 0, 0, 0.082) 0.5px solid;
+  width: 200px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 2rem;
+  color: #777777;
+}
+
+.dropmenu a,.dropmenu2 a {
+  display: block;
+}
+
+header .home:hover ul ,header .page:hover ul{
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.searchWrapper {
+  position: relative;
+}
+.search {
+  height: 40px;
+  width: 0px;
+  background: url("img/search-icon.png") left center no-repeat white;
+  background-size: 25px 25px;
+  padding-left: 30px;
+  font-size: 16px;
+  border: none;
+  transition: width .3s;
+  position: absolute;
+  right: -5px;
+  bottom: -79px;
+  outline: none;
+  cursor: pointer;
+}
+.search:focus {
+  width: 210px;
+  border: solid 1px #e6e6e6;
+  cursor: text;
+}
+
+/* hero */
+
+.hero {
+  margin-top: 100px;
+  margin: 100 auto;
+  margin-bottom: 100px;
+}
+.hero p {
+  font-size: 27px;
+  margin-top: 90px;
+}
+
+
+/* /* main * */
+.main {
+  line-height: 1.5;
+}
+.main a {
+  display: block;
+}
+
+.main ul {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.main li, .main p {
+  font-size: 17px;
+}
+
+.main .date {
+  margin-top: 16px;
+  transition: color .2s;
+}
+.main .date:hover {
+  color:rgb(54, 54, 54)
+}
+
+.main h2 {
+  font-size: 23px;
+  margin-bottom: 30px;
+  color: #000;
+  transition: color .2s;
+}
+.main h2:hover {
+  color: #c49029;
+}
+
+.main ul li+li {
+  width: 700px;
+}
+
+/* pageSellect */
+.pageSellect .container {
+  margin-bottom: 90px;
+  margin-top: 80px;
+}
+
+.pageSellect a {
+  border: #ddd 1px solid;
+  display: block;
+  padding: 13px 18px;
+  text-align: center;
+  align-content: center;
+    opacity: 0.7;
+}
+
+
+.pageSellect ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.pageSellect a:hover {
+  opacity: 1;
+}
+
+
+.pageSellect .this a {
+  background: #EEEEEE;
+  color: #333333;
+  cursor: default;
+  opacity: 1;
+}
+
+/* .profile */
+.profile {
+  font-size: 17px;
+  line-height: 1.7;
+}
+.profile .container {
+  padding-top: 80px;
+  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
+  padding-bottom: 90px;
+  margin-bottom: 90px;
+}
+.profile ul {
+  display: flex;
+}
+
+.profile li {
+  width: 260px;
+  align-items: center;
+}
+.profile li+li {
+  margin-left: 20px;
+  padding: 0 20px;
+}
+
+.profile li>ul {
+  display: flex;
+  align-items: center;
+}
+.profile img {
+  width: 100px;
+  border-radius: 50%;
+}
+.profile h3 {
+  color: #333;
+}
+
+.profile .fa-brands {
+  margin-right: 10px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  opacity: .7;
+  align-items: center;
+  transition: opacity .2s;
+}
+.profile .fa-brands:hover {
+  opacity: 1;
+}
+
+.profile h2 {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+.profile p {
+  margin: 5px 0 10px;
+}
+.profile li a {
+  display: inline-block;
+  transition: color .2s;
+  border-bottom: solid 1px #ddd;
+  line-height: 1;
+}
+.profile li a:hover {
+  color: #c49029;
+}
+.profile .categoryWrapper a {
+  margin-bottom: 20px;
+
+}
+
+.profile .search2 {
+  height: 40px;
+  font-size: 16px;
+  outline: none;
+  width: 210px;
+  border: solid 1px #e6e6e6;
+  cursor: text;
+  margin-top: 90px;
+}
+
+/* footer */
+
+footer .container {
+  margin-bottom: 90px;
+}
+
+footer ul {
+  display: flex;
+  align-items: center;
+}
+
+footer .fa-brands {
+  margin-right: 15px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  opacity: .7;
+  align-items: center;
+  transition: opacity .2s;
+}
+footer .fa-brands:hover {
+  opacity: 1;
+}
+
+footer .copyright {
+  text-align: center;
+  margin: 0 auto;
+}
+footer a {
+  display: inline;
+  color: #5d5d5d;
+  transition: .2s;
+}
+footer a:hover {
+  color: #202020;
+}
+
+@media (min-width: 800px) {
+  .container {
+    width: calc(100% - 32px);
+    max-width: 1030px;
+  }
+}
